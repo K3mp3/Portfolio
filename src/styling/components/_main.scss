@@ -4,12 +4,13 @@ main {
     width: 100%;
     position: absolute;
     top: 100vh;
+    display: flex;
+    flex-direction: column;
+
     .about-me-container {
         height: 50px;
-        position: absolute;
-        top: 100%;
         padding: 15px;
-        padding-top: 20px;
+        padding-top: 55px;
 
         h2 {
             font-family: 'Inter', sans-serif;
@@ -23,6 +24,14 @@ main {
         p {
             color: $text-color;
             font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            margin-bottom: 70px;
         }
+    }
+
+    .my-projects {
+        background-color: $second-color;
+        height: 210px;
+        margin-top: 345px;
     }
 }

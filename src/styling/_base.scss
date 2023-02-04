@@ -1,1 +1,6 @@
-@use '../styling/abstracts/colors';
+@use '../styling/abstracts/colors' as *;
+
+body {
+    margin: 0;
+    background-color: $main-color;
+}
