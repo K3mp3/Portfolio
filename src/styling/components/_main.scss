@@ -1,0 +1,28 @@
+@use '../abstracts/colors' as *;
+
+main {
+    width: 100%;
+    position: absolute;
+    top: 100vh;
+    .about-me-container {
+        height: 50px;
+        position: absolute;
+        top: 100%;
+        padding: 15px;
+        padding-top: 20px;
+
+        h2 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            color: black;
+            margin: auto;
+            font-size: 1.7rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: $text-color;
+            font-family: 'Inter', sans-serif;
+        }
+    }
+}
