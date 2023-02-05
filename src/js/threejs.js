@@ -111,27 +111,3 @@ const loop = () => {
   window.requestAnimationFrame(loop);
 }
 loop();
-
-
-// Mouse animation color
-let mouseDown = false;
-let rgb = [];
-window.addEventListener("mouseclick" , () => (mouseDown = true));
-window.addEventListener("mouseclick", () => (mouseDown = false));
-
-window.addEventListener("mouseclick", (e) => {
-  if (mouseDown) {
-    rgb = [
-      Math.round((e.pageX / sizes.width) * 255),
-      Math.round((e.pageY / sizes.height) * 255),
-      150,
-    ];
-
-    let newColor = new THREE.Color(`rgb(${rgb.join(",")})`)
-    gsap.to(particlesMesh.material.color, {
-      r: newColor.r,
-      g: newColor.g,
-      b: newColor.b,
-    })    
-  }
-})
