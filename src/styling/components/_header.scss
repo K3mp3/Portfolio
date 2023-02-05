@@ -60,35 +60,92 @@ header {
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            height: calc(60vh - 100px);
+            height: 400px;
             width: 100%;
     
             .profile-picture {
                 margin: auto;
                 text-align: center;
-               
     
                 img {
                     border-radius: 50%;
                 }
             }
+
+            .mobile-header-text-container {
+                background: linear-gradient(to right, #36A2F1 0%, #5036F1 100%);
+                max-width: 100%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                letter-spacing: 0.2rem;
+                margin: auto;
+                margin-top: 40px;
+            }
+        }
+
+        .header-text-container {
+            display: none;
         }
     }
 
-    .text-container {
+    
+}
+
+
+@media screen and (min-width: 910px) {
+    .presentation {
+        max-width: 1000px;
+        padding: 0;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+
+        .profile-picture-container {
+            order: 2;
+            display: flex;
+            //background-color: #36A2F1;
+            width: 90px;
+
+            img {
+                border-radius: 50%;
+                width: 350px;
+                height: 350px;
+            }
+
+            h1 {
+                background: linear-gradient(to right, #36A2F1 0%, #5036F1 100%);
+                max-width: 100%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                letter-spacing: 0.2rem;
+                margin: auto;
+            }
+
+            .mobile-header-text-container {
+                display: none;
+            }
+        }
+    }
+
+    .header-text-container {
+        position: relative;
+        order: 1;
+        line-height: 400px;
         width: 100%;
+        height: 20px;
         text-align: center;
         font-size: 1.6rem;
-        position: relative;
-        margin-top: -150px;
+        display: inline;
 
         h1 {
             background: linear-gradient(to right, #36A2F1 0%, #5036F1 100%);
             max-width: 100%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: 0.3rem;
+            letter-spacing: 0.2rem;
             margin: auto;
+            display: inline;
         }
-    }
+    } 
 }
