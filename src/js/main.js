@@ -5,7 +5,6 @@
  function init() {
 
     /* Adding classes */
-    headerH1.classList.add("remove-text");
 
     /* Calling functions */
     changeText();
@@ -17,6 +16,6 @@ function changeText() {
     if (width > 920) {
         headerH1.classList.remove("remove-text");
     } else {
-        headerH1.classList.add("remove-text");
+        return;
     }
 }
