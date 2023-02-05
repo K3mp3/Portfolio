@@ -73,16 +73,7 @@ renderer.setClearColor(new THREE.Color('#161b1c'), 1);
 renderer.render(scene, camera)
 
 
-// Mouse
-document.addEventListener('mousemove', animateParticles);
 
-let mouseY = 0;
-let mouseX = 0;
-
-function animateParticles(e) {
-  mouseY = e.clientY;
-  mouseX = e.clientX;
-}
 
 
 //Controls
@@ -98,11 +89,6 @@ window.addEventListener('resize', () => {
   //Update sizes
   sizes.width = window.innerWidth;
   sizes.height = window.innerHeight;
-  
-  //Update camera
-  camera.aspect = sizes.width / sizes.height;
-  camera.updateProjectionMatrix();
-  renderer.setSize(sizes.width, sizes.height);
 })
 
 const loop = () => {
