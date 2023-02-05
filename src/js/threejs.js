@@ -18,14 +18,14 @@ scene.add(sphere)
 
 
 const particlesMaterial = new THREE.PointsMaterial( {
-  size: 0.005,
-  //color: 'blue',
+  size: 0.006,
+  color: '#5036F1',
   //blending: THREE.AdditiveBlending,
 })
 
 
 const particlesGeometry = new THREE.BufferGeometry;
-const particlesCnt = 6000; // How many particles we want 
+const particlesCnt = 2000; // How many particles we want 
 
 const posArray = new Float32Array(particlesCnt * 3);
 // xyz, xyz, xyz, xyz
