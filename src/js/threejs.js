@@ -11,7 +11,7 @@ const scene = new THREE.Scene();
 const geometry = new THREE.TorusKnotGeometry( 0.01, 0.8, 100, 16 );
 const sphereMaterial = new THREE.PointsMaterial( {
   size: 0.01,
-  color: '#00fff3',
+  color: '#36A2F1',
 })
 const sphere = new THREE.Points(geometry, sphereMaterial);
 scene.add(sphere)
@@ -43,13 +43,13 @@ scene.add(particlesMesh);
 //Sizes
 const sizes = {
   width: window.innerWidth,
-  height: 800,
+  height: window.innerHeight + 100,
 }
 
 //Light
 const light = new THREE.PointLight(0xfff, 1, 100);
 light.position.set(1, 10, 10);
-light.intensity = 1.25;
+light.intensity = 10.25;
 scene.add(light);
 
 //Camera
@@ -69,7 +69,7 @@ const canvas = document.querySelector(".webgl");
 const renderer = new THREE.WebGLRenderer({ canvas });
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(2);
-renderer.setClearColor(new THREE.Color('#161b1c'), 1);
+renderer.setClearColor(new THREE.Color('#121617'), 1);
 renderer.render(scene, camera)
 
 
