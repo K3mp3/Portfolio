@@ -56,11 +56,10 @@ header {
         padding-bottom: 290px;
         position: relative;
 
-        .profile-picture-container {
+        .profile-container {
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            height: 400px;
             width: 100%;
     
             .profile-picture {
@@ -82,13 +81,11 @@ header {
                 margin-top: 40px;
             }
         }
-
-        .header-text-container {
-            display: none;
-        }
-    }
-
+    } 
     
+    .remove-text {
+        display: none;
+    }
 }
 
 
@@ -97,55 +94,52 @@ header {
         max-width: 1000px;
         padding: 0;
         position: relative;
-        display: flex;
-        flex-direction: row;
         margin: auto;
 
-        .profile-picture-container {
-            order: 2;
+        .profile-container {
             display: flex;
-            //background-color: #36A2F1;
-            width: 90px;
+            justify-content: space-between;
+            height: 400px;
+            line-height: 400px;
+
+            .profile-picture {
+                display: flex;
+                order: 2;
+                margin-right: 0px;
+                padding: 0 50px;
+            }
 
             img {
                 border-radius: 50%;
                 width: 350px;
                 height: 350px;
-            }
+            } 
 
-            h1 {
-                background: linear-gradient(to right, #36A2F1 0%, #5036F1 100%);
-                max-width: 100%;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                letter-spacing: 0.2rem;
-                margin: auto;
-            }
-
-            .mobile-header-text-container {
-                display: none;
-            }
+            .header-text-container {
+                position: relative;
+                order: 1;
+                width: 100%;
+                text-align: center;
+                font-size: 1.6rem;
+                visibility: visible;
+        
+                h1 {
+                    background: linear-gradient(to right, #36A2F1 0%, #5036F1 100%);
+                    max-width: 100%;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    letter-spacing: 0.2rem;
+                    margin: auto;
+                    order: 1;
+                    line-height: 400px;
+                }
+            } 
         }
     }
 
-    .header-text-container {
-        position: relative;
-        order: 1;
-        line-height: 400px;
-        width: 100%;
-        height: 20px;
-        text-align: center;
-        font-size: 1.6rem;
-        display: inline;
+    .mobile-header-text-container { 
+        display: none;
+    }
 
-        h1 {
-            background: linear-gradient(to right, #36A2F1 0%, #5036F1 100%);
-            max-width: 100%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: 0.2rem;
-            margin: auto;
-            display: inline;
-        }
-    } 
 }
+
