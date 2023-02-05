@@ -43,7 +43,7 @@ scene.add(particlesMesh);
 //Sizes
 const sizes = {
   width: window.innerWidth,
-  height: window.innerHeight,
+  height: 800,
 }
 
 //Light
