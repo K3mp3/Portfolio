@@ -73,7 +73,16 @@ renderer.setClearColor(new THREE.Color('#161b1c'), 1);
 renderer.render(scene, camera)
 
 
+// Mouse
+document.addEventListener('mousemove', animateParticles);
 
+let mouseY = 0;
+let mouseX = 0;
+
+function animateParticles(e) {
+  mouseY = e.clientY;
+  mouseX = e.clientX;
+}
 
 
 //Controls
@@ -82,13 +91,18 @@ controls.enableDamping = true;
 controls.enablePan = false;
 controls.enableZoom = false;
 controls.autoRotate = true;
-controls.autoRotateSpeed = 0.2;
+controls.autoRotateSpeed = 1;
 
 //Resize
 window.addEventListener('resize', () => {
   //Update sizes
   sizes.width = window.innerWidth;
   sizes.height = window.innerHeight;
+  
+  //Update camera
+  camera.aspect = sizes.width / sizes.height;
+  camera.updateProjectionMatrix();
+  renderer.setSize(sizes.width, sizes.height);
 })
 
 const loop = () => {
@@ -97,3 +111,27 @@ const loop = () => {
   window.requestAnimationFrame(loop);
 }
 loop();
+
+
+// Mouse animation color
+let mouseDown = false;
+let rgb = [];
+window.addEventListener("mouseclick" , () => (mouseDown = true));
+window.addEventListener("mouseclick", () => (mouseDown = false));
+
+window.addEventListener("mouseclick", (e) => {
+  if (mouseDown) {
+    rgb = [
+      Math.round((e.pageX / sizes.width) * 255),
+      Math.round((e.pageY / sizes.height) * 255),
+      150,
+    ];
+
+    let newColor = new THREE.Color(`rgb(${rgb.join(",")})`)
+    gsap.to(particlesMesh.material.color, {
+      r: newColor.r,
+      g: newColor.g,
+      b: newColor.b,
+    })    
+  }
+})
