@@ -11,7 +11,8 @@ main {
     .about-me-container {
         height: 50px;
         padding: 20px;
-        padding-top: 55px;
+        padding-top: 65px;
+        max-width: 700px;
 
         h2 {
             font-family: 'Inter', sans-serif;
@@ -24,13 +25,12 @@ main {
 
         p {
             color: $main-text-color;
-            margin-bottom: 70px;
         }
     }
 
     .my-projects {
         background-color: $second-color;
-        margin-top: 345px;
+        margin-top: 210px;
         text-align: center;
     }
 
@@ -41,5 +41,16 @@ main {
         img {
             max-width: 100%;
         }
+    }
+}
+
+
+@media screen and (min-width: 910px) {
+    .about-me-container {
+        height: 50px;
+        padding: 20px;
+        padding-top: 55px;
+        max-width: 910px;
+        margin: auto;
     }
 }
