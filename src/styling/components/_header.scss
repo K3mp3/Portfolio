@@ -1,3 +1,5 @@
+@use '../abstracts/colors' as *;
+
 html {
     scroll-behavior: smooth;
 }
@@ -6,12 +8,13 @@ html {
 /* Header section */
 
 header {
-
+    position: relative;
+    
     nav {
-        padding: 15px;
+        padding: 20px;
         display: flex;
         justify-content: space-between;
-        color: white;
+        color: $second-text-color;
         z-index: 2;
         position: fixed;
         width: 100%;
@@ -42,42 +45,44 @@ header {
                     height: 5px;
                     border-radius: 30%;
                     display: block;
-                    background-color: white;
+                    background-color: $main-color;
                 }
             }
         }
     }
 
-    .profile-picture-container {
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: calc(60vh - 100px);
-        width: 100%;
-        top: 30%;
-        position: absolute;
+    .presentation {
+        padding-top: 200px;
+        padding-bottom: 290px;
+        position: relative;
 
-        .profile-picture {
-            margin: auto;
-            text-align: center;
-           
-
-            img {
-                border-radius: 50%;
+        .profile-picture-container {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: calc(60vh - 100px);
+            width: 100%;
+    
+            .profile-picture {
+                margin: auto;
+                text-align: center;
+               
+    
+                img {
+                    border-radius: 50%;
+                }
             }
         }
     }
 
     .text-container {
-        position: absolute;
         width: 100%;
-        top: 70%;
         text-align: center;
         font-size: 1.6rem;
+        position: relative;
+        margin-top: -150px;
 
         h1 {
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
             background: linear-gradient(to right, #36A2F1 0%, #5036F1 100%);
             max-width: 100%;
             -webkit-background-clip: text;

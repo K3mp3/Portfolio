@@ -2,36 +2,40 @@
 
 main {
     width: 100%;
-    position: absolute;
-    top: 100vh;
     display: flex;
     flex-direction: column;
 
     .about-me-container {
         height: 50px;
-        padding: 15px;
+        padding: 20px;
         padding-top: 55px;
 
         h2 {
             font-family: 'Inter', sans-serif;
             font-weight: 700;
-            color: black;
+            color: #212121;
             margin: auto;
             font-size: 1.7rem;
             margin-bottom: 20px;
         }
 
         p {
-            color: $text-color;
-            font-family: 'Inter', sans-serif;
-            font-weight: 400;
+            color: $main-text-color;
             margin-bottom: 70px;
         }
     }
 
     .my-projects {
         background-color: $second-color;
-        height: 210px;
         margin-top: 345px;
+    }
+
+    .project-container {
+        padding: 50px 20px;
+        margin: 20px 0;
+
+        img {
+            max-width: 100%;
+        }
     }
 }
