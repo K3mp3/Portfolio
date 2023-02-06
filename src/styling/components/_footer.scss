@@ -18,6 +18,9 @@ footer {
     
         p {
             margin-bottom: 20px;
+            p[href^='tel'] {
+                color: $second-text-color;
+              }
         }
 
         .social-links{
