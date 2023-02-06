@@ -8,7 +8,7 @@ module.exports = {
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
-        "sourceType": "module"
+        "sourceType": "module",
     },
     "rules": {
         "indent": [
@@ -17,7 +17,7 @@ module.exports = {
         ],
         "linebreak-style": [
             "error",
-            "unix"
+            "windows"
         ],
         "quotes": [
             "error",
