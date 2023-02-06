@@ -22,28 +22,30 @@
     <header>
       <canvas class="webgl"></canvas>
     <nav>
-      <div class="nav-logo">
-        <img src="./public/LogoMelvin(white).png">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img src="./public/LogoMelvin(white).png">
+        </div>
+        <section class="hero-container" id="hero-containerID">
+          <button class="menuToggleBtn" aria-label="toggle menu">
+            <span class="first-row rows">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <span class="second-row rows">
+              <span></span>
+              <span></span> <!-- Middle point-->
+              <span></span>
+            </span>
+            <span class="third-row rows">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+        </section>
       </div>
-      <section class="hero-container" id="hero-containerID">
-        <button class="menuToggleBtn" aria-label="toggle menu">
-          <span class="first-row rows">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-          <span class="second-row rows">
-            <span></span>
-            <span></span> <!-- Middle point-->
-            <span></span>
-          </span>
-          <span class="third-row rows">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </button>
-      </section>
     </nav>
     <section class="presentation">
       <div class="profile-container">
@@ -67,12 +69,14 @@
         I like to work with other people and to have a goal with my projects</p>
       </section>
     <section class="my-projects">
-      <div class="project-container">
-        <a target="_blank" href="https://medieinstitutet.github.io/fed22d-grafiska-verktyg-gazpachon/"><img src="./public/img/nothingPhone.png"></a>
-      </div>
-      <div class="project-container">
-        <a target="_blank" href="https://medieinstitutet.github.io/fed22d-grafiska-verktyg-korsbarstomaterna/"><img src="./public/img/pizzaleria.jpg"></a>
-      </div>
+      <div class="my-projects-container">
+        <div class="project-container left-box">
+          <a target="_blank" href="https://medieinstitutet.github.io/fed22d-grafiska-verktyg-gazpachon/"><img src="./public/img/nothingPhone.png"></a>
+        </div>
+        <div class="project-container right-box">
+          <a target="_blank" href="https://medieinstitutet.github.io/fed22d-grafiska-verktyg-korsbarstomaterna/"><img src="./public/img/pizzaleria.jpg"></a>
+        </div>
+    </div>
     </section>
   </main>
   <footer>
