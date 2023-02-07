@@ -9,9 +9,9 @@ main {
     background-color: $main-color;
 
     .about-me-container {
-
-        padding: 20px;
-        padding-top: 250px;
+        padding: 0 20px;
+        padding-top: 240px;
+        padding-bottom: 240px;
         max-width: 700px;
 
         h2 {
@@ -31,7 +31,7 @@ main {
 
     .my-projects {
         background-color: $second-color;
-        margin-top: 550px;
+
         text-align: center;
     }
 
