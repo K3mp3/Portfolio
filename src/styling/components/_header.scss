@@ -63,6 +63,27 @@ header {
             width: 100vw;
             z-index: 1;
             position: absolute;
+            place-content: center;
+
+            ul {
+                display: grid;
+                justify-content: center;
+                position: absolute;
+                margin: auto;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50px);
+                gap: 50px;
+
+                li {
+                    list-style: none;
+                }
+
+                a {
+                    font-size: 3rem;
+                    color: $second-text-color;
+                }
+            }
         }
 
     }
