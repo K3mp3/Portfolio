@@ -3,8 +3,10 @@
 main {
     width: 100%;
     position: relative;
-    z-index: 2;
+    z-index: 1;
     background-color: $main-color;
+    background-color: #36A2F1;
+
     .information-container {
         padding: 20px;
         color: $main-text-color;

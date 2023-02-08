@@ -9,7 +9,7 @@ html {
 
 header {
     height: 100vh;
-    position: relative;
+    position: sticky;
 
     .header-container {
         height: 100vh;
@@ -99,9 +99,10 @@ nav {
 }
 
 .presentation {
-    position: relative;
-    top: 25%;
-    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     .profile-container {
         background-position: center;
