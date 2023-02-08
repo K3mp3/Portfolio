@@ -12,14 +12,32 @@ let newWidth = width * 2;
  
 function init() {
     menuOverlay = document.querySelector(".menu-overlay");
-    gsap.to(menuOverlay, { opacity: 0});
+    gsap.to(menuOverlay, {x: width, opacity: 0});
     
+    /* Create eventlisteners */
+    window.addEventListener("resize", updateScreenSize);
 
     /* Calling functions */
     changeText();
+    createEventListeners();
 }
 
 init();
+
+function createEventListeners() {
+    document.querySelector(".menuToggleBtn").addEventListener("click", toggleMenu);
+    document.querySelector(".menuTogglebtn").addEventListener("keypress", toggleMenu);
+
+    for (let i = 0; i < menuOptions.length; i++) // Closes menu after a link press
+        menuOptions[i].addEventListener("click", () => {
+            closeMenu();
+        });
+}
+
+function updateScreenSize() {
+    width = document.documentElement.clientWidth;
+    console.log(width);
+}
 
 function changeText() {
     if (width > 920) {
@@ -29,22 +47,20 @@ function changeText() {
     }
 }
 
-function createEventListeners() {
-    document.querySelector(".menuToggleBtn").addEventListener("click", () => {
-        if (!menuIsOpen) { // Mobile menu button handler
-            menuOverlay.classList.remove("hide-menu-overlay");
-            openMenu();
-            gsap.to(menuOverlay, {duration: 1, opacity: 1});
-        } else {
-            menuOverlay.classList.remove("hide-menu-overlay");
-            closeMenu();
-            gsap.to(menuOverlay, {duration: 1, opacity: 0});
-        }
-    });
-    for (let i = 0; i < menuOptions.length; i++) // Closes menu after a link press
-        menuOptions[i].addEventListener("click", () => {
-            closeMenu();
-        });
+function toggleMenu() {
+    if (!menuIsOpen) { // Mobile menu button handler
+        menuOverlay.classList.remove("hide-menu-overlay");
+        updateScreenSize();
+        openMenu();
+        gsap.to(menuOverlay, {x: 0, duration: 1, opacity: 1});
+        createEventListeners();
+    } else {
+        menuOverlay.classList.remove("hide-menu-overlay");
+        updateScreenSize();
+        closeMenu();
+        gsap.to(menuOverlay, {x: width, duration: 1, opacity: 0});
+        createEventListeners();
+    }
 }
 
 
