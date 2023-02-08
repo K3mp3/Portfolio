@@ -2,11 +2,9 @@
 
 main {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    position: relative;
     z-index: 10;
     background-color: $main-color;
-
     .information-container {
         padding: 20px;
         color: $main-text-color;
@@ -23,8 +21,11 @@ main {
     }
 
     .about-me-container {
-        max-width: 700px;
-        padding: 50px 20px 55px 20px;
+        padding: 20px;
+
+        .about-me {
+            padding: 60px 0;
+        }
 
         h2 {
             font-family: 'Inter', sans-serif;
@@ -44,9 +45,9 @@ main {
     .my-projects {
         background-color: $second-color;
         text-align: center;
+        padding: 60px 0;
 
         .main-title {
-            margin-top: 50px;
             background: linear-gradient(to right, #36A2F1 0%, #5036F1 100%);
             max-width: 100%;
             -webkit-background-clip: text;
@@ -60,7 +61,6 @@ main {
 
     .project-container {
         padding: 50px 20px;
-        margin: 20px 0;
 
         img {
             max-width: 100%;
