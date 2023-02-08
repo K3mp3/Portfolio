@@ -21,7 +21,6 @@ scene.add(sphere);
 const particlesMaterial = new THREE.PointsMaterial( {
     size: 0.006,
     color: "#5036F1",
-    //blending: THREE.AdditiveBlending,
 });
 
 
@@ -71,7 +70,7 @@ const renderer = new THREE.WebGLRenderer({ canvas });
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(2);
 renderer.setClearColor(new THREE.Color("#121617"), 1);
-renderer.render(scene, camera)
+renderer.render(scene, camera);
 
 
 // Mouse

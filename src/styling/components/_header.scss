@@ -10,6 +10,12 @@ html {
 header {
     height: 100vh;
     position: relative;
+
+    .header-container {
+        background-color: #c09565;
+        height: 100vh;
+        position: relative;
+    }
 }
 
 nav {
@@ -18,7 +24,7 @@ nav {
         display: flex;
         justify-content: space-between;
         color: $second-text-color;
-        z-index: 3;
+        z-index: 6;
         position: fixed;
         width: 100%;
         left: 50%;
@@ -62,7 +68,7 @@ nav {
         background-color: $second-color;
         height: 100vh;
         width: 100%;
-        z-index: 1;
+        z-index: 5;
         position: fixed;
         place-content: center;
 
@@ -97,6 +103,9 @@ nav {
     padding-top: 200px;
     padding-bottom: 290px;
     position: relative;
+    background-color: #36A2F1;
+    top: 20%;
+    
 
     .profile-container {
         background-position: center;
