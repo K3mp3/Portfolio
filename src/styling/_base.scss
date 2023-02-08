@@ -1,8 +1,9 @@
 @use '../styling/abstracts/colors' as *;
 
-body {
+body, html {
     margin: 0;
     background-color: $main-color;
+    height: 100%;
 }
 
 /* Text styling */
@@ -21,4 +22,12 @@ a {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     text-decoration: none;
+}
+
+.dark-text {
+    color: $main-text-color;
+}
+
+.dark-background {
+    background-color: $second-color;
 }

@@ -3,12 +3,9 @@ import gsap from "gsap";
 /* eslint-disable no-undef */
 /* varabiler */
 
-const headerH1 = document.querySelector(".h1-header-desktop");
-
 let menuIsOpen = false;
 let menuOverlay = false;
 let width = document.documentElement.clientWidth;
-let newWidth = width * 2;
  
 function init() {
     menuOverlay = document.querySelector(".menu-overlay");
@@ -18,7 +15,6 @@ function init() {
     window.addEventListener("resize", updateScreenSize);
 
     /* Calling functions */
-    changeText();
     createEventListeners();
 }
 
@@ -37,14 +33,6 @@ function createEventListeners() {
 function updateScreenSize() {
     width = document.documentElement.clientWidth;
     console.log(width);
-}
-
-function changeText() {
-    if (width > 920) {
-        headerH1.classList.remove("remove-text");
-    } else {
-        return;
-    }
 }
 
 function toggleMenu() {

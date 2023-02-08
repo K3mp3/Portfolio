@@ -7,6 +7,21 @@ main {
     z-index: 10;
     background-color: $main-color;
 
+    .information-container {
+        padding: 20px;
+        color: $main-text-color;
+        max-width: 890px;
+        margin: auto;
+        margin-top: 97px;
+
+        .information-text {
+            background-color: $fourth-color;
+            height: 50px;
+            width: 890px;
+            display: flex;
+        }
+    }
+
     .about-me-container {
         max-width: 700px;
         padding: 50px 20px 55px 20px;

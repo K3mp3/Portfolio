@@ -8,11 +8,8 @@ html {
 /* Header section */
 
 header {
-    position: relative;
-    height: 100vh;
     
     nav {
-
         .nav-container {
             padding: 20px;
             display: flex;
@@ -23,6 +20,7 @@ header {
             width: 100%;
             left: 50%;
             transform: translate(-50%, 0);
+            
         }
     
         img {
@@ -144,20 +142,21 @@ header {
     }
 
     .presentation {
-        max-width: 800px;
+        max-width: 890px;
         padding: 0;
-        position: relative;
         margin: auto;
 
         .profile-container {
-            display: flex;
-            justify-content: space-between;
+            justify-content: center;
             height: 500px;
+            line-height: 460px;
 
             .profile-picture {
                 display: flex;
-                order: 2;
+                margin: auto;
                 padding: 0 15px;
+                width: 100%;
+                height: 500px;
             }
 
             img {
@@ -165,7 +164,12 @@ header {
                 min-width: 300px;
                 min-height: 300px;
                 margin: auto;
+                order: 2;
             } 
+
+            .mobile-header-text-container {
+                order: 1;
+            }
 
             .header-text-container {
                 position: relative;
@@ -188,10 +192,5 @@ header {
             } 
         }
     }
-
-    .mobile-header-text-container { 
-        display: none;
-    }
-
 }
 
