@@ -6,6 +6,7 @@ import gsap from "gsap";
 let menuIsOpen = false;
 let menuOverlay = false;
 let width = document.documentElement.clientWidth;
+let menuOptions = document.querySelectorAll(".menu-overlay a");
  
 function init() {
     menuOverlay = document.querySelector(".menu-overlay");

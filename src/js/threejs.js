@@ -66,9 +66,9 @@ scene.add(camera);
 
 //Render
 const canvas = document.querySelector(".webgl");
-const renderer = new THREE.WebGLRenderer({ canvas });
-console.log(canvas, renderer);
-if (canvas && renderer) {
+let renderer = null;
+if (canvas) {
+    renderer = new THREE.WebGLRenderer({ canvas });
     renderer.setSize(sizes.width, sizes.height);
     renderer.setPixelRatio(2);
     renderer.setClearColor(new THREE.Color("#121617"), 1);
@@ -86,14 +86,7 @@ function animateParticles(e) {
     mouseX = e.clientX;
 }
 
-
-//Controls
-const controls = new OrbitControls(camera, canvas);
-controls.enableDamping = true;
-controls.enablePan = false;
-controls.enableZoom = false;
-controls.autoRotate = true;
-controls.autoRotateSpeed = 1;
+let controls = null;
 
 const loop = () => {
     controls.update();
@@ -103,6 +96,13 @@ const loop = () => {
 
 //Resize
 if (renderer) {
+    //Controls
+    controls = new OrbitControls(camera, canvas);
+    controls.enableDamping = true;
+    controls.enablePan = false;
+    controls.enableZoom = false;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = 1;
     window.addEventListener("resize", () => {
         //Update sizes
         sizes.width = window.innerWidth;
