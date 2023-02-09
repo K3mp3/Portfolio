@@ -9,14 +9,16 @@ main {
     .information-container {
         padding: 20px;
         color: $main-text-color;
-        max-width: 890px;
+        max-width: 1600px;
         margin: auto;
         margin-top: 97px;
+        height: 600px;
+        color: $main-text-color;
 
         .information-text {
             background-color: $fourth-color;
-            height: 50px;
-            width: 890px;
+            color: $second-text-color;
+            max-width: 1600px;
             display: flex;
         }
     }
@@ -62,6 +64,7 @@ main {
 
     .project-container {
         padding: 50px 20px;
+        margin: auto;
 
         img {
             max-width: 100%;
@@ -85,16 +88,33 @@ main {
         text-align: center;
         padding: 0;
         max-width: 1600px;
+    }
 
+    .left-box-container {
+        order: 1;
+        width: 50%;
+        position: relative;
 
         .left-box {
-            order: 1;
-            width: 50%;
+            position: absolute;
+            padding: 160px 20px;
+            position: relative;
+            top: 50%;
+            transform: translatey(-50%)
         }
+    }
+
+    .right-box-container {
+        order: 2;
+        width: 50%;
+        position: relative;
 
         .right-box {
-            order: 2;
-            width: 50%;
+            padding: 160px 20px;
+            position: absolute;
+            position: relative;
+            top: 50%;
+            transform: translatey(-50%)
         }
     }
 }
