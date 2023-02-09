@@ -5,7 +5,6 @@ main {
     position: relative;
     z-index: 1;
     background-color: $main-color;
-    background-color: #36A2F1;
 
     .information-container {
         padding: 20px;
@@ -23,7 +22,7 @@ main {
     }
 
     .about-me-container {
-        padding: 20px;
+        padding: 100px 20px;
 
         .about-me {
             padding: 60px 0;
@@ -47,7 +46,7 @@ main {
     .my-projects {
         background-color: $second-color;
         text-align: center;
-        padding: 60px 0;
+        padding: 160px 0;
 
         .main-title {
             background: linear-gradient(to right, #36A2F1 0%, #5036F1 100%);
