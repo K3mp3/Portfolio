@@ -67,11 +67,12 @@ scene.add(camera);
 //Render
 const canvas = document.querySelector(".webgl");
 const renderer = new THREE.WebGLRenderer({ canvas });
-renderer.setSize(sizes.width, sizes.height);
-renderer.setPixelRatio(2);
-renderer.setClearColor(new THREE.Color("#121617"), 1);
-renderer.render(scene, camera);
-
+if (canvas && renderer) {
+    renderer.setSize(sizes.width, sizes.height);
+    renderer.setPixelRatio(2);
+    renderer.setClearColor(new THREE.Color("#121617"), 1);
+    renderer.render(scene, camera);
+}
 
 // Mouse
 document.addEventListener("mousemove", animateParticles);
@@ -80,8 +81,8 @@ let mouseY = 0;
 let mouseX = 0;
 
 function animateParticles(e) {
-  mouseY = e.clientY;
-  mouseX = e.clientX;
+    mouseY = e.clientY;
+    mouseX = e.clientX;
 }
 
 
@@ -93,21 +94,23 @@ controls.enableZoom = false;
 controls.autoRotate = true;
 controls.autoRotateSpeed = 1;
 
-//Resize
-window.addEventListener("resize", () => {
-  //Update sizes
-  sizes.width = window.innerWidth;
-  sizes.height = window.innerHeight;
-  
-  //Update camera
-  camera.aspect = sizes.width / sizes.height;
-  camera.updateProjectionMatrix();
-  renderer.setSize(sizes.width, sizes.height);
-})
-
 const loop = () => {
-  controls.update();
-  renderer.render(scene, camera)
-  window.requestAnimationFrame(loop);
+    controls.update();
+    renderer.render(scene, camera);
+    window.requestAnimationFrame(loop);
+};
+
+//Resize
+if (renderer) {
+    window.addEventListener("resize", () => {
+        //Update sizes
+        sizes.width = window.innerWidth;
+        sizes.height = window.innerHeight;
+      
+        //Update camera
+        camera.aspect = sizes.width / sizes.height;
+        camera.updateProjectionMatrix();
+        renderer.setSize(sizes.width, sizes.height);
+    });
+    loop();
 }
-loop();
