@@ -22,7 +22,7 @@ init();
 
 function createEventListeners() {
     document.querySelector(".menuToggleBtn").addEventListener("click", toggleMenu);
-    document.querySelector(".menuTogglebtn").addEventListener("keypress", toggleMenu);
+    document.querySelector(".menuToggleBtn").addEventListener("keypress", toggleMenu);
 
     for (let i = 0; i < menuOptions.length; i++) // Closes menu after a link press
         menuOptions[i].addEventListener("click", () => {

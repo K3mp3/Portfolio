@@ -67,6 +67,7 @@ scene.add(camera);
 //Render
 const canvas = document.querySelector(".webgl");
 const renderer = new THREE.WebGLRenderer({ canvas });
+console.log(canvas, renderer);
 if (canvas && renderer) {
     renderer.setSize(sizes.width, sizes.height);
     renderer.setPixelRatio(2);
