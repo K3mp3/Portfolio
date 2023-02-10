@@ -1,5 +1,5 @@
 # Portfolio
-This is the portfolio I've built for my self. It is made with HTML 5, SCSS, vanilla JavaScript, Three.js, Vite and ESLint. 
+This is the portfolio I've built for myself. It is made with HTML 5, SCSS, vanilla JavaScript, Three.js, Vite and ESLint. 
 
 I started of by taking inspiration from other Front-End Developer portfolios.
 After that I started working in Figma trying to design a portfolio I liked. 
