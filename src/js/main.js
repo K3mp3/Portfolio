@@ -2,14 +2,18 @@ import gsap from "gsap";
 
 /* eslint-disable no-undef */
 /* varabiler */
-
 let menuIsOpen = false;
 let menuOverlay = false;
 let width = document.documentElement.clientWidth;
-let menuOptions = document.querySelectorAll(".menu-overlay a");
+//let nav;
+
+const menuOptions = document.querySelectorAll(".menu-overlay a");
+
  
 function init() {
     menuOverlay = document.querySelector(".menu-overlay");
+    //nav = document.querySelector("nav").addEventListener("scroll", changeNavColor);
+
     gsap.to(menuOverlay, {x: width, opacity: 0});
     
     /* Create eventlisteners */
@@ -17,9 +21,10 @@ function init() {
 
     /* Calling functions */
     createEventListeners();
-}
+    //changeNavColor();
 
-init();
+    window.onscroll = function() { console.log("hej"); };
+}
 
 function createEventListeners() {
     document.querySelector(".menuToggleBtn").addEventListener("click", toggleMenu);
@@ -68,4 +73,5 @@ function openMenu() {
     menuIsOpen = true;
 }
 
+init();
 createEventListeners();
