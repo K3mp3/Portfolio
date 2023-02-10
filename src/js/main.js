@@ -9,6 +9,7 @@ let width = document.documentElement.clientWidth;
 
 const menuOptions = document.querySelectorAll(".menu-overlay a");
 
+window.onscroll = function() { console.log("hej"); };
  
 function init() {
     menuOverlay = document.querySelector(".menu-overlay");
