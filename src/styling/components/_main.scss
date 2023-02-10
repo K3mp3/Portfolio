@@ -8,7 +8,6 @@ main {
 
     .information-container {
         padding: 20px;
-        color: $main-text-color;
         max-width: 1600px;
         margin: auto;
         margin-top: 97px;
@@ -54,6 +53,20 @@ main {
         .right-box-container {
             width: 100%;
             margin-top: -30px;
+        }
+    }
+
+    .second-information-container {
+        padding: 20px;
+        max-width: 1600px;
+        margin: auto;
+        color: $main-text-color;
+
+        .second-information-text {
+            background-color: $fourth-color;
+            color: $second-text-color;
+            max-width: 1600px;
+            padding: 20px;
         }
     }
 
