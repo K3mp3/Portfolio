@@ -8,7 +8,6 @@ main {
 
     .information-container {
         padding: 20px;
-        max-width: 1600px;
         margin: auto;
         margin-top: 97px;
         color: $main-text-color;
@@ -18,6 +17,7 @@ main {
             color: $second-text-color;
             max-width: 1600px;
             padding: 20px;
+            margin-bottom: 50px;
         }
 
         h1 {
@@ -41,9 +41,8 @@ main {
         }
 
         .left-box-container {
-            order: 1;
             width: 100%;
-            position: relative;
+
     
             .left-box {
                 margin-bottom: 50px;
@@ -136,32 +135,48 @@ main {
         padding: 0;
         max-width: 1600px;
     }
+}
 
-    .left-box-container {
-        order: 1;
-        width: 50%;
-        position: relative;
+@media screen and (min-width: 1010px) {
+    .information-container {
+        padding: 0;
+        max-width: 1600px;
+        margin: auto;
+        margin-top: 97px;
+        color: $main-text-color;
 
-        .left-box {
-            position: absolute;
-            padding: 160px 20px;
-            position: relative;
-            top: 50%;
-            transform: translatey(-50%)
+        .information-text {
+            background-color: $fourth-color;
+            color: $second-text-color;
+            max-width: 1600px;
+            padding: 0;
+            display: flex;
         }
-    }
 
-    .right-box-container {
-        order: 2;
-        width: 50%;
-        position: relative;
-
-        .right-box {
-            padding: 160px 20px;
-            position: absolute;
+        .left-box-container {
+            width: 100%;
             position: relative;
-            top: 50%;
-            transform: translatey(-50%)
+    
+            .left-box {
+                position: absolute;
+                padding: 0 20px;
+                top: 50%;
+                transform: translatey(-50%)
+            }
+        }
+    
+        .right-box-container {
+            width: 100%;
+            position: relative;
+            top: 15px;
+    
+            .right-box {
+                padding: 20px;
+                position: absolute;
+                position: relative;
+                top: 50%;
+                transform: translatey(-50%)
+            }
         }
     }
 }
