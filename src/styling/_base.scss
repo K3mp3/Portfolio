@@ -1,9 +1,17 @@
 @use '../styling/abstracts/colors' as *;
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 body, html {
     margin: 0;
     background-color: $main-color;
     height: 100%;
+    color: white;
 }
 
 /* Text styling */
@@ -37,5 +45,9 @@ li {
 }
 
 .scroll {
+    background-color: aqua;
+}
+
+.nav-scroll-bacground-BG {
     background-color: aqua;
 }

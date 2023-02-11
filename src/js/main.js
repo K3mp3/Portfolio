@@ -5,15 +5,15 @@ import gsap from "gsap";
 let menuIsOpen = false;
 let menuOverlay = false;
 let width = document.documentElement.clientWidth;
-//let nav;
+let nav;
+let scrollColor;
 
 const menuOptions = document.querySelectorAll(".menu-overlay a");
 
-window.onscroll = function() { console.log("hej"); };
  
 function init() {
     menuOverlay = document.querySelector(".menu-overlay");
-    //nav = document.querySelector("nav").addEventListener("scroll", changeNavColor);
+    nav = document.querySelector(".nav-container");
 
     gsap.to(menuOverlay, {x: width, opacity: 0});
     
@@ -22,9 +22,19 @@ function init() {
 
     /* Calling functions */
     createEventListeners();
-    //changeNavColor();
+    scrollColor = window.onscroll = changeNavColor();
+}
 
-    window.onscroll = function() { console.log("hej"); };
+function changeNavColor() {
+    if (scrollColor >= 200 ) {
+        nav.classList.add("nav-scroll-bacground-BGd");
+        console.log(nav);
+        console.log("hej");
+    } 
+    else {
+        nav.classList.remove("nav-scroll-bacground-BG");
+    }
+    //console.log(nav);
 }
 
 function createEventListeners() {
