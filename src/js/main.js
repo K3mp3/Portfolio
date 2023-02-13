@@ -6,7 +6,6 @@ let menuIsOpen = false;
 let menuOverlay = false;
 let width = document.documentElement.clientWidth;
 let nav;
-let scrollColor;
 
 const menuOptions = document.querySelectorAll(".menu-overlay a");
 
@@ -22,19 +21,22 @@ function init() {
 
     /* Calling functions */
     createEventListeners();
-    scrollColor = window.onscroll = changeNavColor();
+    window.onscroll = changeNavColor();
 }
 
 function changeNavColor() {
-    console.log("hej");
-    if (scrollColor > 200 ) {
-        nav.classList.add("nav-scroll-bacground-BGd");
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        nav.classList.add("nav-scroll-background-BG");
         console.log(nav);
         console.log("hej");
-    } 
+    }
+
     else {
         nav.classList.remove("nav-scroll-bacground-BG");
     }
+
+    console.log("tja");
+
     //console.log(nav);
 }
 
