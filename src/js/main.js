@@ -18,21 +18,22 @@ function init() {
     
     /* Create eventlisteners */
     window.addEventListener("resize", updateScreenSize);
+    window.addEventListener("scroll", changeNavColor);
 
     /* Calling functions */
     createEventListeners();
-    window.onscroll = changeNavColor();
+    //window.onscroll = changeNavColor();
 }
 
 function changeNavColor() {
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         nav.classList.add("nav-scroll-background-BG");
         console.log(nav);
         console.log("hej");
     }
 
     else {
-        nav.classList.remove("nav-scroll-bacground-BG");
+        nav.classList.remove("nav-scroll-background-BG");
     }
 
     console.log("tja");
