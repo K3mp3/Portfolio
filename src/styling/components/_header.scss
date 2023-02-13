@@ -25,7 +25,6 @@ header {
 }
 
 nav {
-    transition: all 1.4s ease-in-out;
     .nav-container {
         padding: 20px;
         display: flex;
@@ -36,7 +35,15 @@ nav {
         width: 100vw;
         left: 50%;
         transform: translate(-50%, 0);
+    }
+
+    .nav-scroll-BG {
+        transition: all 0.4s ease-in-out;
         background-color: $second-color;
+    }
+
+    .nav-scroll-bg-remove {
+        transition: all 0.4s ease-in-out;
     }
 
     img {
@@ -66,7 +73,7 @@ nav {
                 height: 4px;
                 border-radius: 50%;
                 display: block;
-                background-color: #36A2F1;
+                background-color: $main-color;
             }
         }
     }

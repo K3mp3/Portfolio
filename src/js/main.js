@@ -23,6 +23,10 @@ function init() {
     /* Calling functions */
     createEventListeners();
     //window.onscroll = changeNavColor();
+
+    if (width > 910) {
+        nav.classList.remove("dark-background");
+    }
 }
 
 function changeNavColor() {
