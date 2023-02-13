@@ -45,7 +45,7 @@ scene.add(particlesMesh);
 //Sizes
 const sizes = {
     width: window.innerWidth,
-    height: window.innerHeight + 100,
+    height: window.innerHeight,
 };
 
 //Light
@@ -73,7 +73,7 @@ if (canvas) {
     renderer = new THREE.WebGLRenderer({ canvas });
     renderer.setSize(sizes.width, sizes.height);
     renderer.setPixelRatio(2);
-    renderer.setClearColor(new THREE.Color("#121617"), 1);
+    renderer.setClearColor(new THREE.Color("#000"), 1);
     renderer.render(scene, camera);
 }
 
