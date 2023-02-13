@@ -27,13 +27,14 @@ function init() {
 
 function changeNavColor() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        nav.classList.add("nav-scroll-background-BG");
+        nav.classList.add("nav-scroll-BG");
         console.log(nav);
         console.log("hej");
     }
 
     else {
-        nav.classList.remove("nav-scroll-background-BG");
+        nav.classList.remove("nav-scroll-BG");
+        nav.classList.add("nav-scroll-bg-remove");
     }
 
     console.log("tja");
