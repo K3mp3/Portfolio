@@ -1,23 +1,17 @@
 @use '../styling/abstracts/colors' as *;
 
-body, html {
-    margin: 0;
-    background-color: $main-color;
-    height: 100%;
-    overflow-x: hidden;
-    color: $second-text-color;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.webgl {
-    position: absolute;
-    top: 0;
-    left: 0;
+body, html {
+    margin: 0;
+    background-color: $main-color;
+    height: 100%;
+    color: white;
 }
 
 /* Text styling */
@@ -47,5 +41,13 @@ li {
 }
 
 .dark-background {
-    background-color: $second-color;
+    background-color: $third-color;
+}
+
+.scroll {
+    background-color: aqua;
+}
+
+.nav-scroll-bacground-BG {
+    background-color: aqua;
 }

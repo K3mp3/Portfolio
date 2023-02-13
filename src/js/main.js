@@ -26,7 +26,8 @@ function init() {
 }
 
 function changeNavColor() {
-    if (scrollColor >= 200 ) {
+    console.log("hej");
+    if (scrollColor > 200 ) {
         nav.classList.add("nav-scroll-bacground-BGd");
         console.log(nav);
         console.log("hej");
