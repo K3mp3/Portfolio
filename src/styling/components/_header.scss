@@ -10,12 +10,13 @@ html {
 
 header {
     height: 100vh;
-    background-color: #45708f;
     position: relative;
+    overflow-x: hidden;
 
     .webgl {
         height: 100vh;
         position: absolute;
+        overflow-x: hidden;
     }
 
     .header-container {
