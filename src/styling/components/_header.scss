@@ -190,7 +190,12 @@ nav {
 
             a {
                 color: $fourth-text-color;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
+
         }
 
         .hero-container {
