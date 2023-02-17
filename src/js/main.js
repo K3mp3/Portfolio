@@ -19,6 +19,7 @@ function init() {
     /* Create eventlisteners */
     window.addEventListener("resize", updateScreenSize);
     window.addEventListener("scroll", changeNavColor);
+    window.addEventListener("resize", removeClass);
 
     /* Calling functions */
     createEventListeners();
@@ -27,6 +28,7 @@ function init() {
 
     if (width > 910) {
         nav.classList.remove("dark-background");
+        showDesktopNavLinks.classList.remove("hidden");
     }
 }
 
@@ -37,7 +39,6 @@ function init() {
 
 function removeClass() {
     if (width > 909) {
-        console.log("hej");
         showDesktopNavLinks.classList.remove("hidden");
     } else {
         showDesktopNavLinks.classList.add("hidden");
