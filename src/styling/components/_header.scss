@@ -35,6 +35,10 @@ nav {
         width: 100vw;
         left: 50%;
         transform: translate(-50%, 0);
+
+        .hidden {
+            display: none;
+        }
     }
 
     .nav-scroll-BG {
@@ -163,6 +167,35 @@ nav {
     .nav-container {
         max-width: 1920px;
         margin: auto;
+
+        .nav-links {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .desktop-links {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            color: $second-text-color;
+            z-index: 7;
+            text-align: end;
+            gap: 50px;
+        }
+
+        li {
+            list-style: none;
+
+            a {
+                color: $fourth-text-color;
+            }
+        }
+
+        .hero-container {
+            display: none;
+        }
     }
 
     .presentation {
@@ -179,7 +212,7 @@ nav {
                 display: flex;
                 margin: auto;
                 padding: 0 15px;
-                width: 100%;
+                min-width: 850px;
                 height: 500px;
             }
 

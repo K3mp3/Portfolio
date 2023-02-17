@@ -5,20 +5,21 @@ import gsap from "gsap";
 let menuIsOpen = false;
 let menuOverlay = false;
 let width = document.documentElement.clientWidth;
-let nav;
 
+const nav = document.querySelector(".nav-container");
 const menuOptions = document.querySelectorAll(".menu-overlay a");
+const showDesktopNavLinks = document.querySelector(".desktop-links");
 
  
 function init() {
     menuOverlay = document.querySelector(".menu-overlay");
-    nav = document.querySelector(".nav-container");
 
     gsap.to(menuOverlay, {x: width, opacity: 0});
     
     /* Create eventlisteners */
     window.addEventListener("resize", updateScreenSize);
     window.addEventListener("scroll", changeNavColor);
+    window.addEventListener("resize", removeClass);
 
     /* Calling functions */
     createEventListeners();
@@ -29,21 +30,30 @@ function init() {
     }
 }
 
+
+/* This function is needed to be able to remove a class.
+   The class is applied on the navigation links on smaller devices because it is
+   only for larger screens */
+
+function removeClass() {
+    if (width > 909) {
+        console.log("hej");
+        showDesktopNavLinks.classList.remove("hidden");
+    } else {
+        showDesktopNavLinks.classList.add("hidden");
+    }
+}
+
+
 function changeNavColor() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         nav.classList.add("nav-scroll-BG");
-        console.log(nav);
-        console.log("hej");
     }
 
     else {
         nav.classList.remove("nav-scroll-BG");
         nav.classList.add("nav-scroll-bg-remove");
     }
-
-    console.log("tja");
-
-    //console.log(nav);
 }
 
 function createEventListeners() {
@@ -58,7 +68,6 @@ function createEventListeners() {
 
 function updateScreenSize() {
     width = document.documentElement.clientWidth;
-    console.log(width);
 }
 
 function toggleMenu() {
