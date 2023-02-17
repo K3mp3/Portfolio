@@ -19,10 +19,10 @@ function init() {
     /* Create eventlisteners */
     window.addEventListener("resize", updateScreenSize);
     window.addEventListener("scroll", changeNavColor);
-    window.addEventListener("resize", removeClass);
 
     /* Calling functions */
     createEventListeners();
+    removeClass();
     //window.onscroll = changeNavColor();
 
     if (width > 910) {
