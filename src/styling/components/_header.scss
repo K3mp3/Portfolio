@@ -185,6 +185,11 @@ nav {
             gap: 50px;
         }
 
+        .desktop-links :hover {
+            color: $second-text-color;
+            transition: all 0.3s ease-in-out;
+        }
+
         li {
             list-style: none;
 
