@@ -186,8 +186,7 @@ nav {
         }
 
         .desktop-links :hover {
-            color: $second-text-color;
-            transition: all 0.3s ease-in-out;
+            color: $first-hover-color;
         }
 
         li {

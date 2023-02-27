@@ -24,14 +24,8 @@ function init() {
     /* Calling functions */
     createEventListeners();
     removeClass();
-    //window.onscroll = changeNavColor();
-
-    if (width > 910) {
-        nav.classList.remove("dark-background");
-        showDesktopNavLinks.classList.remove("hidden");
-    }
+    checkScreenSize();
 }
-
 
 /* This function is needed to be able to remove a class.
    The class is applied on the navigation links on smaller devices because it is
@@ -42,6 +36,14 @@ function removeClass() {
         showDesktopNavLinks.classList.remove("hidden");
     } else {
         showDesktopNavLinks.classList.add("hidden");
+    }
+}
+
+
+function checkScreenSize() {
+    if (width > 910) {
+        nav.classList.remove("dark-background");
+        showDesktopNavLinks.classList.remove("hidden");
     }
 }
 
