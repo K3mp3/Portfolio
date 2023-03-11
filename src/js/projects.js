@@ -1,11 +1,13 @@
 /* Global variables */
 const myProjectsContainer = document.querySelector(".my-projects-container");
 
+import Pizzaleria from "assets/pizzaleria.jpg";
+
 const projects = [
     {
         images: [
             {
-                img: "/public/img/nothingPhone.png",
+                img: Pizzaleria,
                 alt: "The project which the link goes to",
             }
         ],
