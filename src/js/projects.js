@@ -2,6 +2,8 @@
 const myProjectsContainer = document.querySelector(".my-projects-container");
 
 import Pizzaleria from "../assets/pizzaleria.jpg";
+import nothingPhone from "../assets/nothingPhone.jpg";
+import toTheMoon from "../assets/toTheMoon.jpg";
 
 const projects = [
     {
@@ -16,7 +18,7 @@ const projects = [
     {
         images: [
             {
-                img: "/public/img/pizzaleria.jpg",
+                img: nothingPhone,
                 alt: "The project which the link goes to",
             }
         ],
@@ -25,7 +27,7 @@ const projects = [
     {
         images: [
             {
-                img: "/public/img/toTheMoon.jpg",
+                img: toTheMoon,
                 alt: "The project which the link goes to",
             }
         ],
