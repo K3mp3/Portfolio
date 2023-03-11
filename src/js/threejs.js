@@ -5,8 +5,6 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import * as dat from "dat.gui";
 import { PointsMaterial } from "three";
 
-window.onscroll = function() { console.log("hej"); };
-
 //Scene
 const scene = new THREE.Scene();
 
