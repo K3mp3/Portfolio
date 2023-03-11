@@ -1,7 +1,7 @@
 /* Global variables */
 const myProjectsContainer = document.querySelector(".my-projects-container");
 
-import Pizzaleria from "assets/pizzaleria.jpg";
+import Pizzaleria from "../assets/pizzaleria.jpg";
 
 const projects = [
     {
