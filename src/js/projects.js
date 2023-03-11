@@ -5,7 +5,7 @@ const projects = [
     {
         images: [
             {
-                img: "../public/img/nothingPhone.png",
+                img: "../../../public/img/nothingPhone.png",
                 alt: "The project which the link goes to",
             }
         ],
