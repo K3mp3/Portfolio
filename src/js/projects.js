@@ -5,7 +5,7 @@ const projects = [
     {
         images: [
             {
-                img: "../../../public/img/nothingPhone.png",
+                img: "../../public/img/nothingPhone.png",
                 alt: "The project which the link goes to",
             }
         ],
@@ -14,7 +14,7 @@ const projects = [
     {
         images: [
             {
-                img: "../public/img/pizzaleria.jpg",
+                img: "../../public/img/pizzaleria.jpg",
                 alt: "The project which the link goes to",
             }
         ],
@@ -23,7 +23,7 @@ const projects = [
     {
         images: [
             {
-                img: "../public/img/toTheMoon.jpg",
+                img: "../../public/img/toTheMoon.jpg",
                 alt: "The project which the link goes to",
             }
         ],
