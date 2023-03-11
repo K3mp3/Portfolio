@@ -2,7 +2,7 @@
 const myProjectsContainer = document.querySelector(".my-projects-container");
 
 import Pizzaleria from "../assets/pizzaleria.jpg";
-import nothingPhone from "../assets/nothingPhone.jpg";
+import nothingPhone from "../assets/nothingPhone.png";
 import toTheMoon from "../assets/toTheMoon.jpg";
 
 const projects = [
