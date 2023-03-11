@@ -13,7 +13,7 @@ const projects = [
                 alt: "The project which the link goes to",
             }
         ],
-        link: "https://medieinstitutet.github.io/fed22d-grafiska-verktyg-gazpachon/",
+        link: "https://medieinstitutet.github.io/fed22d-grafiska-verktyg-korsbarstomaterna/",
     },
     {
         images: [
@@ -22,7 +22,7 @@ const projects = [
                 alt: "The project which the link goes to",
             }
         ],
-        link: "https://medieinstitutet.github.io/fed22d-grafiska-verktyg-korsbarstomaterna/",
+        link: "https://medieinstitutet.github.io/fed22d-grafiska-verktyg-gazpachon/",
     },
     {
         images: [
