@@ -4,6 +4,7 @@ const myProjectsContainer = document.querySelector(".my-projects-container");
 import Pizzaleria from "../assets/pizzaleria.jpg";
 import nothingPhone from "../assets/nothingPhone.png";
 import toTheMoon from "../assets/toTheMoon.jpg";
+import donutShop from "../assets/donutShop.webp";
 
 const projects = [
     {
@@ -32,6 +33,15 @@ const projects = [
             }
         ],
         link: "https://k3mp3.github.io/Major-Tom/",
+    },
+    {
+        images: [
+            {
+                img: donutShop,
+                alt: "The project which the link goes to",
+            }
+        ],
+        link: "https://medieinstitutet.github.io/fed22d-js-grundkurs-gruppuppgift-webbshop-team-kontorstid/",
     }
 ];
 
