@@ -111,9 +111,25 @@ main {
     .project-container {
         padding: 50px 20px;
         margin: auto;
+        position: relative;
 
         img {
             max-width: 100%;
+        }
+    }
+
+    .my-projects-hover-div {
+        transition: all 0.4s ease-in-out;
+        width: 294px;
+        height: 520px;
+        top: 50px;
+        position: absolute;
+        z-index: 2;
+
+        &:hover {
+            transition: all 0.4s ease-in-out;
+            background-color: #36A2F1;
+            z-index: 2;
         }
     }
 }

@@ -25,7 +25,20 @@ function init() {
     createEventListeners();
     removeClass();
     checkScreenSize();
+    navAnimation();
 }
+
+
+function createEventListeners() {
+    document.querySelector(".menuToggleBtn").addEventListener("click", toggleMenu);
+    document.querySelector(".menuToggleBtn").addEventListener("keypress", toggleMenu);
+
+    for (let i = 0; i < menuOptions.length; i++) // Closes menu after a link press
+        menuOptions[i].addEventListener("click", () => {
+            closeMenu();
+        });
+}
+
 
 /* This function is needed to be able to remove a class.
    The class is applied on the navigation links on smaller devices because it is
@@ -48,6 +61,15 @@ function checkScreenSize() {
 }
 
 
+function navAnimation() {
+    gsap.from(nav, 
+        {
+            y: -200, 
+            duration: 1, 
+        });
+}
+
+
 function changeNavColor() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         nav.classList.add("nav-scroll-BG");
@@ -57,16 +79,6 @@ function changeNavColor() {
         nav.classList.remove("nav-scroll-BG");
         nav.classList.add("nav-scroll-bg-remove");
     }
-}
-
-function createEventListeners() {
-    document.querySelector(".menuToggleBtn").addEventListener("click", toggleMenu);
-    document.querySelector(".menuToggleBtn").addEventListener("keypress", toggleMenu);
-
-    for (let i = 0; i < menuOptions.length; i++) // Closes menu after a link press
-        menuOptions[i].addEventListener("click", () => {
-            closeMenu();
-        });
 }
 
 function updateScreenSize() {
