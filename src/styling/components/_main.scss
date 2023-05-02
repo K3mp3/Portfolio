@@ -5,7 +5,6 @@ main {
     z-index: 1;
     position: relative;
     background-color: $main-color;
-    background-color: #36A2F1;
 
     .information-container {
         padding: 20px;
@@ -71,7 +70,7 @@ main {
     }
 
     .about-me-container {
-        padding: 100px 20px;
+        padding: 100px 20px 140px 20px;
         background-color: blue;
 
         h2 {
