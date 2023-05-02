@@ -9,6 +9,7 @@ let width = document.documentElement.clientWidth;
 const nav = document.querySelector(".nav-container");
 const menuOptions = document.querySelectorAll(".menu-overlay a");
 const showDesktopNavLinks = document.querySelector(".desktop-links");
+const aboutMeContainer = document.querySelector(".about-me-container");
 
  
 function init() {
@@ -47,8 +48,10 @@ function createEventListeners() {
 function removeClass() {
     if (width > 909) {
         showDesktopNavLinks.classList.remove("hidden");
+        aboutMeContainer.classList.remove("about-me-container-mobile");
     } else {
         showDesktopNavLinks.classList.add("hidden");
+        aboutMeContainer.classList.add("about-me-container-mobile");
     }
 }
 
